@@ -109,3 +109,21 @@ Modèle à copier-coller pour chaque nouvelle entrée en haut du fichier.
 
 **Prochaine étape**
 - Créer le composant SkinCanvas qui affiche le template vide (grille agrandie basée sur UV_MAP)
+
+---
+
+## 2026-08-18 (suite)
+
+**Fait**
+- Template vide affiché et validé visuellement (proportions/positions cohérentes avec UV_MAP)
+- Éditeur canvas interactif fonctionnel : choix de couleur, clic + glisser pour peindre
+- Structure éclatée en plusieurs fichiers : hooks/usePixelData.js, utils/canvasCoords.js, components/editor/(SkinCanvas, ColorPicker, SkinEditor).jsx
+
+**Décisions**
+- Peinture restreinte aux zones valides de UV_MAP (isValidPixel dans le hook)
+
+**Bloqué sur / questions**
+-
+
+**Prochaine étape**
+- Étape 5 : construire le modèle 3D (Three.js) et afficher le personnage
