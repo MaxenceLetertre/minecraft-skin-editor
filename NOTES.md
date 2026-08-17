@@ -91,3 +91,21 @@ Modèle à copier-coller pour chaque nouvelle entrée en haut du fichier.
 
 **Prochaine étape**
 - Étape 4 : construire l'éditeur canvas 2D (afficher le template, dessiner pixel par pixel)
+
+---
+
+## 2026-08-18
+
+**Fait**
+- Projet Vite + React initialisé dans le dossier existant (React, JavaScript, ESLint)
+- README.md écrasé par Vite pendant l'install, restauré depuis la version sauvegardée
+- Serveur de dev vérifié fonctionnel (npm run dev)
+
+**Décisions**
+-
+
+**Bloqué sur / questions**
+-
+
+**Prochaine étape**
+- Créer le composant SkinCanvas qui affiche le template vide (grille agrandie basée sur UV_MAP)
