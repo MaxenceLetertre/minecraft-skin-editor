@@ -20,7 +20,18 @@ Overlay (veste) : même découpe, décalée de +16 en y (y=32-48).
 
 ## Tête
 
-*à documenter*
+Zone : x=0-32, y=0-16 (32×16 px)
+
+| Face | Coordonnées | Taille |
+|---|---|---|
+| Dessus | x=8-16, y=0-8 | 8×8 |
+| Dessous | x=16-24, y=0-8 | 8×8 |
+| Droite | x=0-8, y=8-16 | 8×8 |
+| Avant | x=8-16, y=8-16 | 8×8 |
+| Gauche | x=16-24, y=8-16 | 8×8 |
+| Arrière | x=24-32, y=8-16 | 8×8 |
+
+Overlay (casque) : même découpe, décalée de +32 en y (y=32-48).
 
 ## Bras / Jambes
 
