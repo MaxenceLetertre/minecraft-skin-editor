@@ -29,9 +29,11 @@ Modèle à copier-coller pour chaque nouvelle entrée en haut du fichier.
 
 | Sujet | Décision | Pourquoi |
 |---|---|---|
-| Scope V1 | *à définir* | |
-| Format skin | *64x64 (nouveau format) ou aussi 64x32 (legacy) ?* | |
-| Steve / Alex | *à définir* | |
+| Scope V1 | Skin uniquement, pas de cape | Aller petit à petit, éviter de se disperser |
+| Modèle | Steve uniquement (pas Alex) | Simple et efficace pour démarrer |
+| Import de skin existant | Non, pas en V1 | Réservé pour une version ultérieure |
+| Undo/redo | Non, pas en V1 | Pas bloquant pour un premier résultat fonctionnel |
+| Format skin | *à définir* | |
 | Librairie 3D | *skinview3d ou Three.js brut ?* | |
 
 ---
@@ -53,3 +55,21 @@ Modèle à copier-coller pour chaque nouvelle entrée en haut du fichier.
 **Prochaine étape**
 - Définir le scope V1
 - Écrire la table de mapping UV complète (tête, bras, jambes) dans src/utils/uvMapping.js
+
+---
+
+## 2026-08-17 (suite)
+
+**Fait**
+- Repo GitHub créé et premier push effectué (github.com/MaxenceLetertre/minecraft-skin-editor)
+- Scope V1 validé (voir tableau de décisions ci-dessus)
+
+**Décisions**
+- Scope V1 : skin seul, Steve uniquement, pas d'import, pas d'undo/redo
+
+**Bloqué sur / questions**
+-
+
+**Prochaine étape**
+- Écrire la table de mapping UV complète (tête, bras, jambes) dans src/utils/uvMapping.js
+- Poser les bases de l'éditeur canvas 2D

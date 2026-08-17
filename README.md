@@ -24,10 +24,19 @@ docs/                  → notes techniques (mapping UV, décisions d'archi)
 public/                → assets statiques
 ```
 
+## Scope V1
+
+- Skin uniquement (pas de cape)
+- Modèle Steve uniquement (pas Alex)
+- Pas d'import de skin existant
+- Pas d'undo/redo
+
+Ces features sont prévues pour une version ultérieure, une fois la V1 fonctionnelle.
+
 ## Roadmap
 
-- [ ] 1. Définir le scope V1 (skin seul ou skin+cape, Steve/Alex, import, undo)
-- [ ] 2. Poser la structure du projet (fait ✅)
+- [x] 1. Définir le scope V1
+- [x] 2. Poser la structure du projet
 - [ ] 3. Coder la table de mapping UV
 - [ ] 4. Construire l'éditeur canvas 2D
 - [ ] 5. Construire le modèle 3D
