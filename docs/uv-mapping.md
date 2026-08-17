@@ -35,7 +35,23 @@ Overlay (casque) : même découpe, décalée de +32 en y (y=32-48).
 
 ## Bras / Jambes
 
-*à documenter (attention à la différence Steve 4px / Alex 3px de large)*
+Bras droit — zone : x=40-56, y=16-32 (16×16 px)
+
+| Face | Coordonnées | Taille |
+|---|---|---|
+| Dessus | x=44-48, y=16-20 | 4×4 |
+| Dessous | x=48-52, y=16-20 | 4×4 |
+| Droite | x=40-44, y=20-32 | 4×12 |
+| Avant | x=44-48, y=20-32 | 4×12 |
+| Gauche | x=48-52, y=20-32 | 4×12 |
+| Arrière | x=52-56, y=20-32 | 4×12 |
+
+Overlay (manche) : même découpe, décalée de +16 en y (y=32-48).
+
+Bras gauche — zone : x=32-48, y=48-64 (16×16 px), même découpage que le bras droit, décalé.
+Zone séparée introduite avec le format 64×64 moderne (avant, le bras gauche était une image miroir du droit).
+
+Jambes : *à documenter (attention à la différence Steve 4px / Alex 3px de large)*
 
 ## Cape
 
