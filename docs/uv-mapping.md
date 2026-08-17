@@ -51,7 +51,23 @@ Overlay (manche) : même découpe, décalée de +16 en y (y=32-48).
 Bras gauche — zone : x=32-48, y=48-64 (16×16 px), même découpage que le bras droit, décalé.
 Zone séparée introduite avec le format 64×64 moderne (avant, le bras gauche était une image miroir du droit).
 
-Jambes : *à documenter (attention à la différence Steve 4px / Alex 3px de large)*
+Jambe droite — zone : x=0-16, y=16-32 (16×16 px)
+
+| Face | Coordonnées | Taille |
+|---|---|---|
+| Dessus | x=4-8, y=16-20 | 4×4 |
+| Dessous | x=8-12, y=16-20 | 4×4 |
+| Droite | x=0-4, y=20-32 | 4×12 |
+| Avant | x=4-8, y=20-32 | 4×12 |
+| Gauche | x=8-12, y=20-32 | 4×12 |
+| Arrière | x=12-16, y=20-32 | 4×12 |
+
+Overlay (pantalon) : même découpe, décalée de +16 en y (y=32-48).
+
+Jambe gauche — zone : x=16-32, y=48-64 (16×16 px), même découpage que la jambe droite, décalé.
+Zone séparée introduite avec le format 64×64 moderne (avant, la jambe gauche était une image miroir de la droite).
+
+**Note** : les jambes font 4px de large pour Steve ET Alex (contrairement aux bras qui passent à 3px de large en slim). Comme la V1 est en Steve uniquement, pas de souci pour l'instant.
 
 ## Cape
 

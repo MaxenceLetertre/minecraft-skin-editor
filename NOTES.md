@@ -73,3 +73,21 @@ Modèle à copier-coller pour chaque nouvelle entrée en haut du fichier.
 **Prochaine étape**
 - Écrire la table de mapping UV complète (tête, bras, jambes) dans src/utils/uvMapping.js
 - Poser les bases de l'éditeur canvas 2D
+
+---
+
+## 2026-08-17 (suite 2)
+
+**Fait**
+- Table de mapping UV complète : tête, torse, bras droit/gauche, jambe droite/gauche
+- Structure en fichiers séparés (src/utils/uvMap/) + index.js qui rassemble tout
+- Sources vérifiées : Minecraft Wiki + skin-spec sur GitHub
+
+**Décisions**
+- Coordonnées documentées dans docs/uv-mapping.md, à croiser avec un test visuel une fois le canvas + 3D en place (étape 6 de la roadmap)
+
+**Bloqué sur / questions**
+-
+
+**Prochaine étape**
+- Étape 4 : construire l'éditeur canvas 2D (afficher le template, dessiner pixel par pixel)
