@@ -36,19 +36,13 @@ export default function SkinEditor({
   };
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "16px", alignItems: "center" }}>
-      <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
+    <div className="panel">
+      <div className="toolbar">
         <ColorPicker color={color} onChange={setColor} />
-        <button
-          onClick={() => setTool("brush")}
-          style={{ fontWeight: tool === "brush" ? "bold" : "normal" }}
-        >
+        <button className={tool === "brush" ? "active" : ""} onClick={() => setTool("brush")}>
           Pinceau
         </button>
-        <button
-          onClick={() => setTool("eraser")}
-          style={{ fontWeight: tool === "eraser" ? "bold" : "normal" }}
-        >
+        <button className={tool === "eraser" ? "active" : ""} onClick={() => setTool("eraser")}>
           Gomme
         </button>
         <button onClick={onUndo} disabled={!canUndo}>
@@ -59,9 +53,9 @@ export default function SkinEditor({
         </button>
       </div>
       <SkinCanvas pixels={pixels} onPaint={handlePixelClick} />
-      <div style={{ display: "flex", gap: "16px" }}>
+      <div className="toolbar">
         <button onClick={() => exportSkinAsPNG(pixels)}>Télécharger le skin (PNG)</button>
-        <label style={{ cursor: "pointer", border: "1px solid #999", padding: "4px 8px", borderRadius: "4px" }}>
+        <label>
           Importer un skin
           <input type="file" accept="image/png" onChange={handleFileChange} style={{ display: "none" }} />
         </label>

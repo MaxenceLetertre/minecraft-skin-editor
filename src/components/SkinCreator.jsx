@@ -14,7 +14,7 @@ export default function SkinCreator() {
   const texture = useMemo(() => pixelsToTexture(pixels), [pixels]);
 
   return (
-    <div style={{ display: "flex", gap: "32px", justifyContent: "center", flexWrap: "wrap" }}>
+    <div className="editor-panels">
       <SkinEditor
         pixels={pixels}
         onPaint={paintPixel}
@@ -25,7 +25,9 @@ export default function SkinCreator() {
         canUndo={canUndo}
         canRedo={canRedo}
       />
-      <SkinViewer3D texture={texture} />
+      <div className="panel">
+        <SkinViewer3D texture={texture} />
+      </div>
     </div>
   );
 }

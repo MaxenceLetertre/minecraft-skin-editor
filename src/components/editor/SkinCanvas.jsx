@@ -47,7 +47,14 @@ export default function SkinCanvas({ pixels, onPaint }) {
       ref={canvasRef}
       width={TEXTURE_SIZE * SCALE}
       height={TEXTURE_SIZE * SCALE}
-      style={{ border: "1px solid #999", imageRendering: "pixelated", cursor: "crosshair" }}
+      style={{
+        border: "1px solid #999",
+        imageRendering: "pixelated",
+        cursor: "crosshair",
+        width: "100%",
+        maxWidth: TEXTURE_SIZE * SCALE,
+        height: "auto",
+      }}
       onMouseDown={(event) => {
         setIsDrawing(true);
         handlePaint(event);
