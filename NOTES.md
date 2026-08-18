@@ -183,3 +183,38 @@ Modèle à copier-coller pour chaque nouvelle entrée en haut du fichier.
 **Prochaine étape**
 - Ajouter la gomme
 - Import d'un skin existant (mis de côté depuis le début du scope V1)
+
+---
+
+## 2026-08-18 (suite 5)
+
+**Fait**
+- Gomme fonctionnelle : bascule pinceau/gomme via deux boutons, erasePixel dans usePixelData.js retire le pixel de l'état
+- Étape 7 terminée (import de skin existant volontairement laissé de côté, cf. scope V1)
+
+**Décisions**
+-
+
+**Bloqué sur / questions**
+-
+
+**Prochaine étape**
+- Étape 8 : finitions (UI, responsive, cas limites) et déploiement (Vercel/Netlify)
+
+---
+
+## 2026-08-18 (suite 6)
+
+**Fait**
+- Import de skin existant fonctionnel (importSkin.js) : lit un PNG 64x64 et remplit pixels/canvas/3D
+- Undo/redo fonctionnel (historique d'états dans usePixelData.js), boutons Annuler/Rétablir
+- Ces deux features étaient prévues "plus tard" dans le scope V1 initial, ajoutées finalement
+
+**Décisions**
+- Historique undo/redo : un instantané par action (pas de regroupement des pixels d'un même glissé de souris) — simple, amélioration possible plus tard si besoin
+
+**Bloqué sur / questions**
+-
+
+**Prochaine étape**
+- Étape 8 : finitions (UI, responsive, cas limites) et déploiement (Vercel/Netlify)
