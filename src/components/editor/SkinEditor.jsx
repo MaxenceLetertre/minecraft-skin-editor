@@ -1,16 +1,15 @@
 import { useState } from "react";
 import SkinCanvas from "./SkinCanvas";
 import ColorPicker from "./ColorPicker";
-import { usePixelData } from "../../hooks/usePixelData";
 
-export default function SkinEditor() {
+// pixels, onPaint : reçus en props, viennent de SkinCreator (état partagé avec la vue 3D)
+export default function SkinEditor({ pixels, onPaint }) {
   const [color, setColor] = useState("#000000");
-  const { pixels, paintPixel } = usePixelData();
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "16px", alignItems: "center" }}>
       <ColorPicker color={color} onChange={setColor} />
-      <SkinCanvas pixels={pixels} onPaint={(x, y) => paintPixel(x, y, color)} />
+      <SkinCanvas pixels={pixels} onPaint={(x, y) => onPaint(x, y, color)} />
     </div>
   );
 }

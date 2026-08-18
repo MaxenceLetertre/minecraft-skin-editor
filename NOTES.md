@@ -127,3 +127,41 @@ Modèle à copier-coller pour chaque nouvelle entrée en haut du fichier.
 
 **Prochaine étape**
 - Étape 5 : construire le modèle 3D (Three.js) et afficher le personnage
+
+---
+
+## 2026-08-18 (suite 2)
+
+**Fait**
+- Scène 3D vide testée avec succès (cube témoin)
+- Squelette de 6 boîtes construit et positionné (proportions Minecraft)
+- Mapping UV réel appliqué sur les 6 boîtes (applyBoxUV.js), validé avec une texture de debug colorée par face
+- Composants créés : utils/applyBoxUV.js, utils/debugTexture.js, components/viewer3d/(SkinViewer3D, CharacterModel, TexturedBox).jsx
+
+**Décisions**
+- Choix de coder le 3D à la main avec Three.js plutôt que d'utiliser skinview3d, pour bien comprendre le mapping UV
+- Le principe applyBoxUV : remapper les UV par défaut (0/1) d'une BoxGeometry vers la zone exacte de la texture, en inversant l'axe Y
+
+**Bloqué sur / questions**
+-
+
+**Prochaine étape**
+- Étape 6 : synchroniser le canvas 2D et le modèle 3D en live (remplacer la texture de debug par le vrai skin dessiné)
+
+---
+
+## 2026-08-18 (suite 3)
+
+**Fait**
+- État des pixels remonté au parent commun SkinCreator (lifting state up)
+- Texture 3D générée en live depuis les pixels peints (pixelsToTexture.js)
+- Synchronisation confirmée visuellement : dessiner sur le canvas met à jour le modèle 3D instantanément
+
+**Décisions**
+- Fond transparent (donc noir sur le modèle) pour les zones non peintes, assumé pour l'instant : sera couvert une fois un skin complet dessiné/chargé
+
+**Bloqué sur / questions**
+-
+
+**Prochaine étape**
+- Étape 7 : fonctionnalités annexes (import skin existant, export PNG, gomme, couleurs, animation/rotation caméra)

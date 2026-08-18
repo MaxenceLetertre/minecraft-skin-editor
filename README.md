@@ -39,6 +39,8 @@ Ces features sont prévues pour une version ultérieure, une fois la V1 fonction
 - [x] 2. Poser la structure du projet
 - [x] 3. Coder la table de mapping UV
 - [x] 4. Construire l'éditeur canvas 2D
+- [x] 5. Construire le modèle 3D
+- [x] 6. Synchroniser canvas et 3D en live
 - [ ] 3. Coder la table de mapping UV
 - [ ] 4. Construire l'éditeur canvas 2D
 - [ ] 5. Construire le modèle 3D

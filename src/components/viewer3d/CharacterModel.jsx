@@ -1,6 +1,4 @@
-import { useMemo } from "react";
 import { UV_MAP } from "../../utils/uvMap";
-import { createDebugTexture } from "../../utils/debugTexture";
 import TexturedBox from "./TexturedBox";
 
 // Dimensions en unités Three.js, dérivées des tailles réelles Minecraft
@@ -10,17 +8,15 @@ const TORSO = [8, 12, 4];
 const ARM = [4, 12, 4];
 const LEG = [4, 12, 4];
 
-export default function CharacterModel() {
-  // useMemo : on ne génère la texture de debug qu'une seule fois
-  const debugTexture = useMemo(() => createDebugTexture(), []);
-
+// texture : reçue en props, générée à partir des pixels peints par l'utilisateur
+export default function CharacterModel({ texture }) {
   return (
     <group scale={0.15}>
       {/* Torse : premier test du mapping UV réel, avec la texture de debug */}
       <TexturedBox
         size={TORSO}
         faceUVs={UV_MAP.torso}
-        texture={debugTexture}
+        texture={texture}
         position={[0, 0, 0]}
       />
 
@@ -28,7 +24,7 @@ export default function CharacterModel() {
       <TexturedBox
         size={HEAD}
         faceUVs={UV_MAP.head}
-        texture={debugTexture}
+        texture={texture}
         position={[0, TORSO[1] / 2 + HEAD[1] / 2, 0]}
       />
 
@@ -36,7 +32,7 @@ export default function CharacterModel() {
       <TexturedBox
         size={ARM}
         faceUVs={UV_MAP.rightArm}
-        texture={debugTexture}
+        texture={texture}
         position={[TORSO[0] / 2 + ARM[0] / 2, 0, 0]}
       />
 
@@ -44,7 +40,7 @@ export default function CharacterModel() {
       <TexturedBox
         size={ARM}
         faceUVs={UV_MAP.leftArm}
-        texture={debugTexture}
+        texture={texture}
         position={[-(TORSO[0] / 2 + ARM[0] / 2), 0, 0]}
       />
 
@@ -52,7 +48,7 @@ export default function CharacterModel() {
       <TexturedBox
         size={LEG}
         faceUVs={UV_MAP.rightLeg}
-        texture={debugTexture}
+        texture={texture}
         position={[LEG[0] / 2, -(TORSO[1] / 2 + LEG[1] / 2), 0]}
       />
 
@@ -60,7 +56,7 @@ export default function CharacterModel() {
       <TexturedBox
         size={LEG}
         faceUVs={UV_MAP.leftLeg}
-        texture={debugTexture}
+        texture={texture}
         position={[-LEG[0] / 2, -(TORSO[1] / 2 + LEG[1] / 2), 0]}
       />
     </group>

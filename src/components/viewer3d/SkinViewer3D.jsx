@@ -1,7 +1,8 @@
 import { Canvas } from "@react-three/fiber";
 import CharacterModel from "./CharacterModel";
 
-export default function SkinViewer3D() {
+// texture : reçue en props, vient de SkinCreator (qui la génère à partir des pixels peints)
+export default function SkinViewer3D({ texture }) {
   return (
     <Canvas
       camera={{ position: [0, 0, 8], fov: 50 }}
@@ -12,7 +13,7 @@ export default function SkinViewer3D() {
       {/* Lumière directionnelle : donne du volume avec des ombres légères */}
       <directionalLight position={[3, 3, 3]} intensity={0.8} />
 
-      <CharacterModel />
+      <CharacterModel texture={texture} />
     </Canvas>
   );
 }
