@@ -1,4 +1,5 @@
 import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
 import CharacterModel from "./CharacterModel";
 
 // texture : reçue en props, vient de SkinCreator (qui la génère à partir des pixels peints)
@@ -14,6 +15,9 @@ export default function SkinViewer3D({ texture }) {
       <directionalLight position={[3, 3, 3]} intensity={0.8} />
 
       <CharacterModel texture={texture} />
+
+      {/* Clic-glisser pour tourner, molette pour zoomer */}
+      <OrbitControls />
     </Canvas>
   );
 }

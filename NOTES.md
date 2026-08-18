@@ -165,3 +165,21 @@ Modèle à copier-coller pour chaque nouvelle entrée en haut du fichier.
 
 **Prochaine étape**
 - Étape 7 : fonctionnalités annexes (import skin existant, export PNG, gomme, couleurs, animation/rotation caméra)
+
+---
+
+## 2026-08-18 (suite 4)
+
+**Fait**
+- Rotation de caméra ajoutée (OrbitControls de @react-three/drei) : clic-glisser pour tourner, molette pour zoomer
+- Export PNG fonctionnel (exportSkinAsPNG.js) : bouton dans SkinEditor, télécharge un fichier 64x64 avec fond transparent
+
+**Décisions**
+-
+
+**Bloqué sur / questions**
+-
+
+**Prochaine étape**
+- Ajouter la gomme
+- Import d'un skin existant (mis de côté depuis le début du scope V1)
