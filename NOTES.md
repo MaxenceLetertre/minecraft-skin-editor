@@ -292,3 +292,21 @@ Modèle à copier-coller pour chaque nouvelle entrée en haut du fichier.
 
 **Prochaine étape**
 - Déployer sur Vercel (dernière étape de la roadmap)
+
+---
+
+## 2026-08-18 (suite 12) — V1 terminée 🎉
+
+**Fait**
+- Déploiement Vercel réussi, site accessible en ligne et testé de bout en bout (peindre, gomme, undo/redo, import/export, rotation 3D)
+- Les 8 étapes de la roadmap sont cochées
+
+**Bilan V1**
+- Éditeur de skin Minecraft complet : mapping UV documenté à la main, éditeur 2D interactif, modèle 3D avec vraie texture live, undo/redo, import/export PNG, responsive, déployé
+- Features prévues "plus tard" au départ (undo/redo, import) finalement ajoutées avant la fin
+- Features volontairement hors scope V1 : cape, Alex (bras fins)
+
+**Prochaine étape (si reprise du projet)**
+- Cape et modèle Alex, si envie de continuer
+- Amélioration du style visuel
+- Optimisation de l'historique undo/redo (regrouper les pixels d'un même glissé de souris)
