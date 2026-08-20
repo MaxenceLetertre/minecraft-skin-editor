@@ -188,19 +188,6 @@ Modèle à copier-coller pour chaque nouvelle entrée en haut du fichier.
 
 ## 2026-08-18 (suite 5)
 
-**Fait**
-- Gomme fonctionnelle : bascule pinceau/gomme via deux boutons, erasePixel dans usePixelData.js retire le pixel de l'état
-- Étape 7 terminée (import de skin existant volontairement laissé de côté, cf. scope V1)
-
-**Décisions**
--
-
-**Bloqué sur / questions**
--
-
-**Prochaine étape**
-- Étape 8 : finitions (UI, responsive, cas limites) et déploiement (Vercel/Netlify)
-
 ---
 
 ## 2026-08-18 (suite 6)
@@ -218,3 +205,90 @@ Modèle à copier-coller pour chaque nouvelle entrée en haut du fichier.
 
 **Prochaine étape**
 - Étape 8 : finitions (UI, responsive, cas limites) et déploiement (Vercel/Netlify)
+
+---
+
+## 2026-08-18 (suite 7)
+
+**Fait**
+- Interface nettoyée : thème sombre, boutons stylisés, panels arrondis pour le 2D et le 3D (App.css)
+- Test complet de bout en bout validé (peindre, gommer, undo/redo, import/export, rotation caméra)
+
+**Décisions**
+- Style volontairement simple pour la V1, à peaufiner plus tard (pas de temps perdu sur le visuel maintenant)
+
+**Bloqué sur / questions**
+-
+
+**Prochaine étape**
+- Vérifier le rendu sur petit écran / fenêtre réduite
+- Gérer les cas limites de l'import (fichier invalide, mauvaise taille)
+- Déployer sur Vercel
+
+---
+
+## 2026-08-18 (suite 8)
+
+**Fait**
+- Vérification responsive (320px et 768px via outils dev Chrome)
+- Bug trouvé et corrigé : le canvas 2D (640px fixe) débordait et cassait la mise en page à 320px → ajout de width/maxWidth/height en CSS pour rétrécir l'affichage sans changer la résolution interne
+
+**Décisions**
+-
+
+**Bloqué sur / questions**
+-
+
+**Prochaine étape**
+- Continuer la vérification responsive (débordement horizontal résiduel constaté)
+
+---
+
+## 2026-08-18 (suite 9)
+
+**Fait**
+- Débordement horizontal résiduel corrigé : box-sizing border-box global, largeur max du panel, overflow-x hidden en filet de sécurité, vue 3D rendue responsive aussi
+- Accepté comme "suffisant pour la V1" : le style visuel final sera retravaillé plus tard
+
+**Décisions**
+- Style visuel final volontairement pas peaufiné, à retravailler plus tard
+
+**Bloqué sur / questions**
+-
+
+**Prochaine étape**
+- Gérer les cas limites de l'import (fichier invalide, mauvaise taille)
+- Déployer sur Vercel
+
+---
+
+## 2026-08-18 (suite 10)
+
+**Fait**
+- Bug corrigé : clic mal placé sur le canvas depuis le passage en responsive (canvasCoords.js calculait la position en supposant que le canvas affichait toujours 640px). Calcul refait en pourcentage de la taille réellement affichée plutôt qu'en division par SCALE fixe.
+
+**Décisions**
+-
+
+**Bloqué sur / questions**
+-
+
+**Prochaine étape**
+- Gérer les cas limites de l'import (fichier invalide, mauvaise taille)
+- Déployer sur Vercel
+
+---
+
+## 2026-08-18 (suite 11)
+
+**Fait**
+- Cas limites de l'import gérés : fichier non-image rejeté, taille différente de 64x64 rejetée, message d'erreur affiché dans l'UI (import-error)
+
+**Décisions**
+-
+
+**Bloqué sur / questions**
+-
+
+**Prochaine étape**
+- Déployer sur Vercel (dernière étape de la roadmap)

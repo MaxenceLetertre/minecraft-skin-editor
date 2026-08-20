@@ -1,3 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 .app {
   display: flex;
   flex-direction: column;
@@ -8,6 +18,7 @@
   background: #1e1e2e;
   min-height: 100vh;
   color: #e5e5e5;
+  width: 100%;
 }
 
 .app h1 {
@@ -83,8 +94,40 @@
   background: #2a2a3d;
   padding: 16px;
   border-radius: 8px;
+  width: 100%;
+  max-width: 420px;
 }
 
 canvas {
   border-radius: 4px;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 16px 8px;
+  }
+
+  .app h1 {
+    font-size: 1.4rem;
+  }
+
+  .toolbar {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .toolbar button,
+  .toolbar label {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+.import-error {
+  color: #f87171;
+  font-size: 0.85rem;
+  margin: 0;
+  text-align: center;
 }

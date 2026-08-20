@@ -1,18 +1,32 @@
 // Lit un fichier image (PNG) et retourne une Promise qui résout vers un
 // objet pixels ("x_y" -> couleur), au même format que celui de usePixelData.
+// Rejette la Promise avec un message clair si le fichier n'est pas valide.
 export function importSkinFromFile(file) {
   return new Promise((resolve, reject) => {
+    if (!file.type.startsWith("image/")) {
+      reject(new Error("Ce fichier n'est pas une image. Choisis un PNG."));
+      return;
+    }
+
     const reader = new FileReader();
 
     reader.onload = () => {
       const img = new Image();
 
       img.onload = () => {
+        if (img.width !== 64 || img.height !== 64) {
+          reject(
+            new Error(
+              `Taille invalide : ${img.width}×${img.height}px. Un skin doit faire exactement 64×64px.`
+            )
+          );
+          return;
+        }
+
         const canvas = document.createElement("canvas");
         canvas.width = 64;
         canvas.height = 64;
         const ctx = canvas.getContext("2d");
-        // On dessine l'image telle quelle dans un cadre 64x64
         ctx.drawImage(img, 0, 0);
 
         const { data } = ctx.getImageData(0, 0, 64, 64);
@@ -34,11 +48,11 @@ export function importSkinFromFile(file) {
         resolve(pixels);
       };
 
-      img.onerror = reject;
+      img.onerror = () => reject(new Error("Impossible de lire ce fichier comme une image."));
       img.src = reader.result;
     };
 
-    reader.onerror = reject;
+    reader.onerror = () => reject(new Error("Erreur lors de la lecture du fichier."));
     reader.readAsDataURL(file);
   });
 }
